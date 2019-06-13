@@ -25,7 +25,7 @@ errorList: elist = {
 	error14: "Client::Unauthorized",
 	error15: "BusinessValidationError: Please enter at least one line item",
 	error16: "TaxCodeMatcher::MultipleMatchedCodesError",
-	error17: "",
+	error17: "Business Validation Error: We're sorry, QuickBooks encountered an error while calculating tax",
 	error18: "",
 	error19: "",
 	error20: "",
