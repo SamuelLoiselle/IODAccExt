@@ -24,7 +24,7 @@ errorList: elist = {
 	error13: "undefined method `[]' for nil:NilClass",
 	error14: "Client::Unauthorized",
 	error15: "BusinessValidationError: Please enter at least one line item",
-	error16: "",
+	error16: "TaxCodeMatcher::MultipleMatchedCodesError",
 	error17: "",
 	error18: "",
 	error19: "",
@@ -49,7 +49,7 @@ flagList: fList = {
 	flag13: "qbo_taxes_by_line_item_including_shipping_lines",
 	flag14: "Merchant is potentially disconnected, ask for reconnection.",
 	flag15: "Try: use_cart_discount_if_no_refund_lines_present",
-	flag16: "",
+	flag16: "qbo_find_or_create_tax_code_when_multiple_matches_found",
 	flag17: "",
 	flag18: "",
 	flag19: "",
@@ -115,7 +115,9 @@ runCheck14: function() {
 runCheck15: function() {
 	this.errorCheck(flagCheckerS.errorList.error15, flagCheckerS.flagList.flag15)
 },
-
+runCheck16: function() {
+	this.errorCheck(flagCheckerS.errorList.error16, flagCheckerS.flagList.flag16)
+},
 
 // This is the function that runs all functions built for each list item (each error and flag)
 runAll: function() {
@@ -134,6 +136,7 @@ this.runCheck12();
 this.runCheck13();
 this.runCheck14();
 this.runCheck15();
+this.runCheck16();
 },
 };
 
