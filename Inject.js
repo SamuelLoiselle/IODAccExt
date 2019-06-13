@@ -66,11 +66,17 @@ var flagCheckerS = {
 			Object.keys(errors).forEach(errorName => {
 				if(tdElement.innerHTML.includes(errorName)) {
 					var errorFix = "Here's a list of Fixes for this error: \n" + errors[errorName].join(', ');
-					alert(errorFix);
-				} else {console.log('No errors identified on the page!')}
+					//window.confirm(<a href=`https//:boldapps.atlassian.net/browse/ACCOUNTING-709` />);
+					//alert(errorFix);
+				}
+				else {console.log('No errors identified on the page!')}
 			})
 		})
 	}
+};
+
+function getButton(){
+	console.log('get Button');
 };
 
 (function() {
