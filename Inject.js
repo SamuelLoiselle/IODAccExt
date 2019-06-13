@@ -56,7 +56,7 @@ var flagCheckerS = {
 			"qbo_find_or_create_tax_code_when_multiple_matches_found",
 		],
 		"Business Validation Error: We're sorry, QuickBooks encountered an error while calculating tax": [
-	  ("https://boldapps.atlassian.net/browse/ACCOUNTING-709"),
+	  jiraLink: "https://boldapps.atlassian.net/browse/ACCOUNTING-709",
 		],
 	},
 
@@ -66,6 +66,8 @@ var flagCheckerS = {
 			Object.keys(errors).forEach(errorName => {
 				if(tdElement.innerHTML.includes(errorName)) {
 					var errorFix = "Here's a list of Fixes for this error: \n" + errors[errorName].join(', ');
+					var errorDis = document.getElementbyID('errorDisplay');
+					console.log(errorDis);
 					//window.confirm(<a href=`https//:boldapps.atlassian.net/browse/ACCOUNTING-709` />);
 					//alert(errorFix);
 				}
