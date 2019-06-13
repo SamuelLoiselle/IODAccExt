@@ -54,7 +54,7 @@ flagList: fList = {
 	flag18: "",
 	flag19: "",
 	flag20: "",
-	flag21: "Sam1",
+	flag21: "",
 
 },
 
