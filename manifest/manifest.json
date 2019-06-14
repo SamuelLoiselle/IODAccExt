@@ -1,0 +1,30 @@
+{
+  "name": "Flag Checker S",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Scan the errors page for a viable feature flag!",
+  "homepage_url": "http://itsa.rat",
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "web_accessible_resources": [
+    "injected.js"
+  ],
+  "icons": {
+          "128": "icon.png"
+        },
+  "browser_action": {
+    "default_title": "FlagCheckerS",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs",
+    "declarativeContent",
+    "activeTab"
+  ]
+}

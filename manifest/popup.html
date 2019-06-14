@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Error Wrangler MS</title>
+ </head>
+ <body>
+ <div class="container">
+   <p class="masthead">Version 1.0 By Samuel Loiselle and MC Guenette </p>
+   <div class="header-images">
+     <h1>Error Wrangler MS</h1>
+  <img class="image-logo image" src="https://boldcommerce.com/assets/img/bold/bold-quickbooks-integration-logo-2d386bcfe63cbbae4c62d39c50d646ae.svg" alt="quickbooks integration" height="20px">
+  <img class="image-logo" src="https://boldcommerce.com/assets/img/bold/bold-xero-integration-logo-772a13f2b7531e0944c198e87bbf6584.svg" alt="quickbooks integration" height="20px">
+</div>
+<h2>Error information:</h2>
+<p id='errorDisplay'>
+</p>
+<button class="btn btn-primary" id="sam">Check Errors</button>
+<span id="checkresult"></span>
+<script src="popup.js"></script>
+  </div>
+ </body>
+</html>
+
+<!-- CSS for modal -->
+<style>
+  .container {
+   padding: 20px;
+   text-align: center;
+   margin: 0 auto;
+   width: 360px;
+   height: auto;
+}
+img.image-logo.image {
+    border-right: 1px solid #ccc;
+    padding-right: 10px;
+}
+img.image-logo {
+    padding-left: 10px;
+}
+ .image-logo .image {
+   border-bottom: 1px solid #ccc;
+ }
+ .btn {
+   margin: 5px;
+   cursor: pointer;
+   min-width:100%;
+ }
+ .btn:focus {
+    outline: none;
+}
+ .btn-primary {
+   background: #0c92f2;
+   border: 1px solid #0c92f2;
+   -webkit-box-shadow: 0 3px 5px 0 rgba(42, 83, 136, 0.37);
+   box-shadow: 0 3px 5px 0 rgba(42, 83, 136, 0.37);
+   color: #fff!important;
+   font-size: 0.9rem;
+   padding: 10px 20px;
+   border-radius: 100px;
+ }
+ .btn-primary:hover {
+   color: #fff;
+   background-color: #0a7cce;
+   border-color: #0a75c1;
+ }
+ .btn-secondary {
+   background: transparent;
+   border: 1px solid #0c92f2;
+   color: #0c92f2;
+   font-size: 0.9rem;
+   padding: 10px 20px;
+   border-radius: 100px;
+ }
+ .btn-secondary:hover {
+   background: #0c92f2;
+   border: 1px solid #0c92f2;
+   color: #fff;
+ }
+ h1 {
+   font-size: 1.7rem;
+    line-height: 2.2rem;
+    color: #0c92f2;
+    font-family: Proxima Nova,Arial,sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+
+ }
+ h2 {
+   color: #58627c;
+   font-family: Proxima Nova,Arial,sans-serif;
+   font-size: 18px;
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+   font-weight: 400;
+ }
+ p#errorDisplay {
+     font-size: 16px;
+     padding: 5px;
+     width: 100%;
+     word-break: break-word;
+ }
+ .masthead {
+    text-align: center;
+    font-size: small;
+    font-weight: bolder;
+    font-family: Proxima Nova,Arial,sans-serif;
+ }
+</style>

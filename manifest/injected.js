@@ -6,6 +6,11 @@ var flagCheckerS = {
 	//var singleAlert = run_once(function(){
 	//alert(potentialFlag);
 	//};)
+
+  jiraCheck: {
+    flag_available: false
+  },
+
 	errorListThatIsCool: {
 		"The discount amount can't be greater": [
 			"Add this feature flag to merchants store: use_cart_discount_if_no_refund_lines_present",
@@ -24,9 +29,6 @@ var flagCheckerS = {
 		],
 		"Tax rate must be Active": [
 			"Check the tax used by the order, check the API to see if archived, may need tax rate mapping changed by Developers",
-		],
-		"MultipleMatchedCodesError": [
-			"qbo_find_or_create_tax_code_when_multiple_matches_found",
 		],
 		"InvalidAccountTypeError: Invalid account type: For an stock product": [
 			"removing: export_items_as_inventory_items FF is present",
@@ -56,8 +58,8 @@ var flagCheckerS = {
 			"qbo_find_or_create_tax_code_when_multiple_matches_found",
 		],
 		"Business Validation Error: We're sorry, QuickBooks encountered an error while calculating tax": [
-	  ("https://boldapps.atlassian.net/browse/ACCOUNTING-709"),
-		],
+	  	"For more information please see: <br /> <a href='https://boldapps.atlassian.net/browse/ACCOUNTING-709' target=_blank>Accounting-709</a>"
+		]
 	},
 
 	errorCheck: function(errors) {
@@ -65,14 +67,10 @@ var flagCheckerS = {
 		tdElements.forEach(tdElement => {
 			Object.keys(errors).forEach(errorName => {
 				if(tdElement.innerHTML.includes(errorName)) {
-					var errorFix = "Here's a list of Fixes for this error: \n" + errors[errorName].join(', ');
-					alert(errorFix);
+          var errorFix = errors[errorName].join(', ') + "<br /> <hr>";
+          chrome.runtime.sendMessage({errors: errorFix});
 				} else {console.log('No errors identified on the page!')}
 			})
 		})
 	}
 };
-
-(function() {
-	flagCheckerS.errorCheck(flagCheckerS.errorListThatIsCool)
-})();
