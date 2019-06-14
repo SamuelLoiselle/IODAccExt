@@ -7,6 +7,7 @@ chrome.runtime.onMessage.addListener(
   });
 document.getElementById('sam').addEventListener('click', () => {
 	document.getElementById('errorDisplay').innerHTML = '';
+	document.querySelector('h3').style = "display: block;";
 
 	chrome.tabs.executeScript(void 0, {
 		code: `(function() {
